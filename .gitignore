@@ -1,0 +1,9 @@
+# Ignore the asset-download folder
+asset-download/
+
+# Ignore irrelevant things inside the client folder
+client/node_modules/
+client/.env
+client/build/
+client/.DS_Store
+client/*.log

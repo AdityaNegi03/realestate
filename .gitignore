@@ -2,11 +2,27 @@
 asset-download/
 
 # Ignore irrelevant things inside the client folder
-client/node_modules/
-client/.env
-client/build/
-client/.DS_Store
-client/*.log
+**/node_modules/
+**/dist/
+
+.env
+client/.env.local
+client/.env.development
+client/.env.production
+server/.env
+
 client/.next/
 
-.next/
+.DS_Store
+Thumbs.db
+
+.vscode/
+
+client/node_modules/
+server/node_modules/
+client/dist/
+server/dist/
+client/.env
+server/.env
+client/.next/
+node_modules

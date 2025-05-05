@@ -2,6 +2,7 @@ import React from 'react'
 import { NAVBAR_HEIGHT } from '../../lib/constants'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Button } from './ui/button'
 
 const Navbar = () => {
   return (
@@ -16,11 +17,13 @@ const Navbar = () => {
         scroll={false}
         >
           <div className="flex items-center gap-3">
-            <Image 
-             src="/logo.svg"
-             alt="Rentiful Logo"
-             className='w-6 h-6'
-            />
+          <Image
+                src="/logo.svg"
+                alt="Rentiful Logo"
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
             <div className='text-xl font-bold'>
               RENT 
               <span className='text-secondary-500 font-light hover:!text-primary-300'>
@@ -29,10 +32,27 @@ const Navbar = () => {
             </div>
           </div>
         </Link>
+        
       </div>
+      <p className='text-primary-200 hidden md:block'>
+          Discover your perfect rental apartment with our advanced search.
+        </p>
+        <div className="flex items-center gap-5">
+              <Link href="/signin">
+              <Button variant="outline" className="text-white border-white bg-transparent hover:bg-white hover:text-primary-700 rounded-lg">
+                Sign In
+              </Button>
+              </Link>
+              <Link href="/signup">
+              <Button variant="secondary" className="text-white bg-secondary-600 hover:bg-white hover:text-primary-700 rounded-lg">
+                Sign Up
+              </Button>
+              </Link>
+        </div>
+       
     </div>
     </div>
-  )
+  );
 }
 
 export default Navbar

@@ -7,3 +7,6 @@ client/.env
 client/build/
 client/.DS_Store
 client/*.log
+client/.next/
+
+.next/
